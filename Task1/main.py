@@ -10,15 +10,15 @@ from sklearn.datasets import load_iris
 
 iris = load_iris()
 
-iris_df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
-iris_df['species'] = iris.target
+iris_var1 = pd.DataFrame(data=iris.data, columns=iris.feature_names)
+iris_var1['species'] = iris.target
 
-print(iris_df)
+print(iris_var1)
 
-print(iris_df.describe())
+print(iris_var1.describe())
 
 import seaborn as sns
-sns.pairplot(iris_df, hue='species')
+sns.pairplot(iris_var1, hue='species')
 plt.show()
 
 X = iris.data
